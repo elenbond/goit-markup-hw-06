@@ -70,18 +70,43 @@
               <p class="hero-modal-title">Оставьте свои данные, мы вам перезвоним</p>
               <form name="signup_form" autocomplete="on" novalidate class="modal-form">
                 <label type="text" class="label-name">Имя
-                  <input type="text" name="username" class="hr-input-txt">
+                  <div class="modal-fill">
+                    <svg class="icon-modal" width="12" height="12">
+                      <use href="./images/icons.svg#icon-person-black"></use>
+                    </svg>
+                    <input type="text" name="username" class="hr-input-txt">
+                  </div>
+                  
                 </label>
-                <label for="" class="label-name">Телефон
-                  <input type="phone" name="number" class="hr-input-txt">
+                <label class="label-name">Телефон
+                  <div class="modal-fill">
+                    <svg class="icon-modal" width="12" height="12">
+                      <use href="./images/icons.svg#icon-phone-black"></use>
+                    </svg>
+                    <input type="phone" name="phone" class="hr-input-txt">
+                  </div>
+                  
                 </label>
                 <label type="text" class="label-name">Почта
-                  <input type="email" name="email" class="hr-input-txt">
+                  <div class="modal-fill">
+                    <svg class="icon-modal" width="12" height="12">
+                      <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
+                    <input type="email" name="email" class="hr-input-txt">
+                  </div>
+                  
                 </label>
                 <label type="text" class="label-name">Комментарий
-                  <input type="text" name="text" class="hr-input-txt">
+                  <textarea name="Comment" rows="10" placeholder="Введите текст" class="hr-input-txt coment"></textarea>
                 </label>
-                <p>Соглашаюсь с рассылкой и принимаю <span>Условия договора</span> </p>
+                <div class="terms">
+                  <input type="checkbox" class="modal-check">
+                  <!-- <svg width="11" height="8">
+                    <use href="./images/icons.svg#icon-check"></use>
+                  </svg> -->
+                  <p class="paragraphe">Соглашаюсь с рассылкой и принимаю <a href="#" class="terms-accent">Условия договора</a> </p>
+                </div>
+                <button type="submit" class="button active-btn follow-btn">Отправить</button>
               </form>
             </div>
           </div>

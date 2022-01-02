@@ -14,6 +14,7 @@
   --icon-sites-ftr-color: #ffffff;
   --animation-duration: 250ms;
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --button-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* основной цвет текста #212121 */
 /* вторичный цвет текста #757575 */
@@ -375,10 +376,17 @@ body {
   margin: auto;
   margin-top: 20px;
 }
-.modal-check {
-  -webkit-appearance: none;
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.check-vector {
+.icon-check {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -388,19 +396,17 @@ body {
   background-color: #ffffff;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
+  transition-property: fill;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
 } 
-.modal-check:checked + .check-vector {
+.checkbox:checked + .icon-check {
   fill: var(--background-color);
   background-color: var(--accent-color);
   border: none;
 }
-/* .check-vector {
-  position: absolute;
-  bottom: 137px;
-  left: 57px;
-  fill: none;
-} */
-.terms .paragraphe{
+.terms .paragraphe,
+.terms-accent{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -411,17 +417,14 @@ body {
   color: var(--primary-text-color);
 }
 .terms-accent {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  margin-left: 3px;
   text-decoration-line: underline;
   color: var(--accent-color);
 }
 .modal-form .button {
   margin: auto;
   margin-top: 30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--button-shadow-color);
 }
 .modal-form .button:hover,
 .modal-form .button:focus {
@@ -759,7 +762,7 @@ body {
 }
 .hr:hover,
 .hr:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--button-shadow-color);
 }
 
 /* ----------------------Clients------------------------- */
@@ -867,7 +870,7 @@ body {
   background-color: var(--hero-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(var(--button-shadow-color));
   border-radius: 4px;
 }
 .follow-btn {

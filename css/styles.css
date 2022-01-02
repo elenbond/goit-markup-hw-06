@@ -295,21 +295,13 @@ body {
 .modal-form {
   margin-top: 12px;
 }
-.form-field:first-child{
+.label-name:first-child{
   margin-top: 0;
 }
-/* .label-name:first-child{
-  margin-top: 0;
-} */
-.form-field {
+.label-name {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-}
-.label-name {
-  /* display: flex;
-  flex-direction: column;
-  margin-top: 10px; */
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;

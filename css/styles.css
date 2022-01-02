@@ -242,7 +242,7 @@ body {
   display: inline-block;
   width: 528px;
   height: 581px;
-  padding: 40px;
+  padding: 40px 39px 40px 41px;
   background-color: var(--background-color);
   box-sizing: border-box;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -270,6 +270,17 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  
+}
+.icon-close {
+  transition-property: fill;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
+}
+.closing:hover .icon-close,
+.closing:focus .icon-close {
+  fill: var(--accent-color);
+  
 }
 .hero-modal-title {
   font-weight: 700;
@@ -278,36 +289,36 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--title-text-color);
 }
 .modal-form {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 12px;
 }
-.label-name {
+.form-field:first-child{
+  margin-top: 0;
+}
+/* .label-name:first-child{
+  margin-top: 0;
+} */
+.form-field {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+}
+.label-name {
+  /* display: flex;
+  flex-direction: column;
+  margin-top: 10px; */
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   text-align: start;
-
-  color: #757575;
-  
+  color: var(--primary-text-color);
 }
 .modal-fill {
   position: relative;
-}
-.icon-modal {
-  position: absolute;
-  top: 60%;
-  left: 12px;
-  transform: translateY(-60%);
-  width: 18px;
-  height: 18px;
+  color: var(--title-text-color);
 }
 .hr-input-txt {
   width: 448px;
@@ -321,50 +332,100 @@ body {
   text-align: start;
   padding-left: 42px;
 
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--title-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
+}
+.icon-modal {
+  position: absolute;
+  top: 60%;
+  left: 12px;
+  transform: translateY(-60%);
+  width: 18px;
+  height: 18px;
+  transition-property: fill;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
 }
 .hr-input-txt.coment {
-  display: inline;
-  align-items: start;
-  justify-content: start;
-  text-justify: start;
-  text-align: start;
   width: 448px;
   height: 120px;
   padding: 12px 16px;
+  resize: none;
+}
+.hr-input-txt:hover + .icon-modal,
+.hr-input-txt:focus + .icon-modal { 
+  fill: var(--accent-color);
+}
+/* .modal-fill:focus-within > .icon-modal {
+  fill: var(--accent-color);
+} */
+.hr-input-txt:hover,
+.hr-input-txt:focus {
+  border-color: var(--accent-color);
 }
 .terms {
   display: flex;
-  width: 423px;
-  height: 24px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   margin-top: 20px;
 }
 .modal-check {
+  -webkit-appearance: none;
+}
+.check-vector {
+  display: inline-block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
+  box-sizing: border-box;
+  fill: var(--background-color);
+  background-color: #ffffff;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+} 
+.modal-check:checked + .check-vector {
+  fill: var(--background-color);
+  background-color: var(--accent-color);
+  border: none;
 }
+/* .check-vector {
+  position: absolute;
+  bottom: 137px;
+  left: 57px;
+  fill: none;
+} */
 .terms .paragraphe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
-
   color: var(--primary-text-color);
 }
 .terms-accent {
-  
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-
   color: var(--accent-color);
+}
+.modal-form .button {
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.modal-form .button:hover,
+.modal-form .button:focus {
+  background: #188CE8;
 }
 /* ---------------------------Section-------------------------- */
 .section-title {

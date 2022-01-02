@@ -68,43 +68,53 @@
                 </svg>
               </button>
               <p class="hero-modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
               <form name="signup_form" autocomplete="on" novalidate class="modal-form">
-                <label type="text" class="label-name">Имя
+                <div class="form-field">
+                  <label type="text" for="name" class="label-name">Имя</label>
                   <div class="modal-fill">
+                    <input type="text" name="user-name" class="hr-input-txt" id="name"/>
                     <svg class="icon-modal" width="12" height="12">
                       <use href="./images/icons.svg#icon-person-black"></use>
                     </svg>
-                    <input type="text" name="username" class="hr-input-txt">
                   </div>
-                  
-                </label>
-                <label class="label-name">Телефон
+                </div>
+                
+                <div class="form-field">
+                  <label type="text" for="tel" class="label-name">Телефон</label>
                   <div class="modal-fill">
+                    <input type="tel" name="tel" id="tel" class="hr-input-txt"/>
                     <svg class="icon-modal" width="12" height="12">
                       <use href="./images/icons.svg#icon-phone-black"></use>
                     </svg>
-                    <input type="phone" name="phone" class="hr-input-txt">
                   </div>
-                  
-                </label>
-                <label type="text" class="label-name">Почта
+                </div>
+              
+                <div class="form-field">
+                  <label type="text" for="mail" type="text" class="label-name">Почта</label>
                   <div class="modal-fill">
-                    <svg class="icon-modal" width="12" height="12">
+                    <input type="email" name="email" id="mail" class="hr-input-txt"/>
+                    <svg class="icon-modal" width="16" height="15">
                       <use href="./images/icons.svg#icon-email-black"></use>
                     </svg>
-                    <input type="email" name="email" class="hr-input-txt">
                   </div>
-                  
-                </label>
-                <label type="text" class="label-name">Комментарий
-                  <textarea name="Comment" rows="10" placeholder="Введите текст" class="hr-input-txt coment"></textarea>
-                </label>
+                </div>
+                
+                <div class="form-field">
+                  <label type="text" for="comment" class="label-name">Комментарий</label>
+                <textarea name="comment" id="comment" rows="10" placeholder="Введите текст" class="hr-input-txt coment"></textarea>
+                </div>
+                
+
                 <div class="terms">
-                  <input type="checkbox" class="modal-check">
-                  <!-- <svg width="11" height="8">
-                    <use href="./images/icons.svg#icon-check"></use>
-                  </svg> -->
-                  <p class="paragraphe">Соглашаюсь с рассылкой и принимаю <a href="#" class="terms-accent">Условия договора</a> </p>
+                  
+                  <label class="paragraphe">
+                    <input type="checkbox"  class="modal-check"/>
+                    <svg class="check-vector" width="11" height="8">
+                      <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    Соглашаюсь с рассылкой и принимаю <a href="#" class="terms-accent">Условия договора</a> 
+                  </label>
                 </div>
                 <button type="submit" class="button active-btn follow-btn">Отправить</button>
               </form>

@@ -377,6 +377,7 @@ body {
   margin-top: 20px;
 }
 .checkbox {
+  /* -webkit-appearance: none; */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -390,6 +391,7 @@ body {
   display: inline-block;
   width: 16px;
   height: 15px;
+  padding: 2px 1px 2px 2px;
   margin-right: 7px;
   box-sizing: border-box;
   fill: var(--background-color);

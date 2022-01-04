@@ -273,12 +273,12 @@ body {
   border-radius: 50%;
   transition-property: border-color;
   transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function)
+  transition-timing-function: var(--animation-timing-function);
 }
 .icon-close {
   transition-property: fill;
   transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function)
+  transition-timing-function: var(--animation-timing-function);
 }
 .closing:hover .icon-close,
 .closing:focus .icon-close {
@@ -836,9 +836,6 @@ body {
 .container.follow-cont {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: start;
-  width: 570px;
   padding: 0;
 }
 /* Footer follow input */

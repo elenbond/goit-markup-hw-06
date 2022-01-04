@@ -271,7 +271,9 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
-  
+  transition-property: border-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
 }
 .icon-close {
   transition-property: fill;
@@ -281,7 +283,10 @@ body {
 .closing:hover .icon-close,
 .closing:focus .icon-close {
   fill: var(--accent-color);
-  
+}
+.closing:hover,
+.closing:focus {
+ border-color: var(--accent-color);
 }
 .hero-modal-title {
   font-weight: 700;
@@ -311,13 +316,12 @@ body {
 }
 .modal-fill {
   position: relative;
+  margin-top: 4px;
   color: var(--title-text-color);
 }
 .hr-input-txt {
   width: 448px;
   height: 40px;
-  margin-top: 4px;
-  
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -335,9 +339,9 @@ body {
 }
 .icon-modal {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 12px;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
   transition-property: fill;
@@ -345,6 +349,7 @@ body {
   transition-timing-function: var(--animation-timing-function)
 }
 .hr-input-txt.coment {
+  margin-top: 4px;
   width: 448px;
   height: 120px;
   padding: 12px 16px;
@@ -390,10 +395,14 @@ body {
   background-color: #ffffff;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  transition-property: fill;
+  transition-property: fill, border-color, background-color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function)
-} 
+}
+.icon-check:hover, 
+.checkbox:focus:not(:checked) + .icon-check {
+  border-color: var(--accent-color);
+}
 .checkbox:checked + .icon-check {
   fill: var(--background-color);
   background-color: var(--accent-color);
@@ -566,8 +575,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 .sites-list {
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
   margin-top: 16px;
 }
 .site-item {
@@ -812,24 +820,16 @@ body {
 /* Контейнер для адреса */
 .page-footer .pf-cont {
   display: flex;
-  align-content: center;
-  flex-direction: flex-start;
-  display: flex;
   flex-direction: column;
   align-content: flex-start;
-  width: 231px;
   margin-left: 0;
-  margin-right: 70px;
+  margin-right: auto;
   padding: 0;
 }
 /* Контейнер для ссылок */
 .container.site-container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  width: 206px;
   margin: 0;
-  margin-right: 93px;
+  margin-right: auto;
   padding: 0;
 }
 /* Контейнер для подписки */
